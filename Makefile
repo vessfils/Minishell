@@ -6,7 +6,7 @@
 #    By: vess <vess@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/09 15:52:45 by vess              #+#    #+#              #
-#    Updated: 2022/05/09 15:53:42 by vess             ###   ########.fr        #
+#    Updated: 2022/05/10 23:13:09 by vess             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,12 +20,7 @@ CFLAGS =  -Wall -Wextra -Werror -g3 -pthread
 DEPS = $(SRCS:.c=.d)
 
 SRCS =	main.c \
-		utils.c \
-		utils2.c \
-		parse.c	\
-		philo.c \
-		print_msg.c \
-		init.c
+		create_token.c \
 
 	
 _GREY=	$'\033[1;30m

@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_init_tab.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: mkayumba <mkayumba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/10 23:07:47 by vess              #+#    #+#             */
-/*   Updated: 2022/05/18 11:43:28 by vess             ###   ########.fr       */
+/*   Created: 2020/10/15 20:22:19 by mkayumba          #+#    #+#             */
+/*   Updated: 2020/11/22 15:09:13 by lenox            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
+#include "libft.h"
 
-
-//int	main (int ac, char **av, char **env)
-int main()
+void	ft_init_tab(char **tab, int nb_line)
 {
-	printf("LOL");
+	int	line;
 
-
-	return (0);
+	line = 0;
+	while (line < nb_line)
+	{
+		tab[line++] = 0;
+	}
+	tab[line] = 0;
 }

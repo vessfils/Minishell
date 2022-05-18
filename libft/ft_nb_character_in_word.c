@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_nb_character_in_word.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: mkayumba <mkayumba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/10 23:07:47 by vess              #+#    #+#             */
-/*   Updated: 2022/05/18 11:43:28 by vess             ###   ########.fr       */
+/*   Created: 2020/09/25 15:19:48 by mkayumba          #+#    #+#             */
+/*   Updated: 2020/09/25 15:20:05 by lenox            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
+#include "libft.h"
 
-
-//int	main (int ac, char **av, char **env)
-int main()
+int		ft_nb_character_in_word(char *word)
 {
-	printf("LOL");
+	int count;
 
-
-	return (0);
+	count = 0;
+	if (!word)
+		return (count);
+	while (word[count])
+	{
+		if (ft_isspace(word[count]))
+			return (count);
+		count++;
+	}
+	return (count);
 }

@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lenght_nbr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: lenox <mkayumba@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/10 23:07:47 by vess              #+#    #+#             */
-/*   Updated: 2022/05/18 11:43:28 by vess             ###   ########.fr       */
+/*   Created: 2020/08/06 19:24:07 by lenox             #+#    #+#             */
+/*   Updated: 2020/08/06 19:24:31 by lenox            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
-
-
-//int	main (int ac, char **av, char **env)
-int main()
+int		lenght_nbr(int nb)
 {
-	printf("LOL");
+	int	size_nb;
+	int	result;
 
-
-	return (0);
+	result = 1;
+	size_nb = 0;
+	while (result)
+	{
+		result = nb / 10;
+		nb = result;
+		size_nb++;
+	}
+	return (size_nb);
 }

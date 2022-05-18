@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: mkayumba <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/10 23:07:47 by vess              #+#    #+#             */
-/*   Updated: 2022/05/18 11:43:28 by vess             ###   ########.fr       */
+/*   Created: 2019/11/04 16:59:27 by mkayumba          #+#    #+#             */
+/*   Updated: 2019/11/06 14:48:59 by mkayumba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
-
-
-//int	main (int ac, char **av, char **env)
-int main()
+int	ft_toupper(int c)
 {
-	printf("LOL");
-
-
-	return (0);
+	if (c >= 97 && c <= 122)
+		return (c - 32);
+	return (c);
 }

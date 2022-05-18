@@ -6,7 +6,7 @@
 /*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:52:12 by vess              #+#    #+#             */
-/*   Updated: 2022/05/09 16:26:26 by vess             ###   ########.fr       */
+/*   Updated: 2022/05/18 11:27:23 by vess             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,13 @@
 # define DGRAY "\033[1;90m"
 # define BLU "\033[1;34m"
 # define MGN "\033[1;35m"
+
+typedef struct		s_list
+{
+	void			*content;
+	struct s_list	*prev;
+	struct s_list	*next;
+}					t_list;
 
 typedef enum		e_token_type
 {

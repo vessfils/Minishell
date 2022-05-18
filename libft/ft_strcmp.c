@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: lenox <mkayumba@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/10 23:07:47 by vess              #+#    #+#             */
-/*   Updated: 2022/05/18 11:43:28 by vess             ###   ########.fr       */
+/*   Created: 2020/08/06 19:23:37 by lenox             #+#    #+#             */
+/*   Updated: 2020/08/06 19:23:38 by lenox            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
-
-
-//int	main (int ac, char **av, char **env)
-int main()
+int	ft_strcmp(char *s1, char *s2)
 {
-	printf("LOL");
+	int	i;
 
-
-	return (0);
+	i = 0;
+	while (s1[i] && s2[i] && s1[i] == s2[i])
+		i++;
+	return (s1[i] - s2[i]);
 }

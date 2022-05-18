@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: mkayumba <mkayumba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/10 23:07:47 by vess              #+#    #+#             */
-/*   Updated: 2022/05/18 11:43:28 by vess             ###   ########.fr       */
+/*   Created: 2020/09/25 15:50:40 by mkayumba          #+#    #+#             */
+/*   Updated: 2020/09/25 15:50:57 by lenox            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
+#include "libft.h"
+#include <stdlib.h>
 
-
-//int	main (int ac, char **av, char **env)
-int main()
+char		*ft_strnew(size_t size)
 {
-	printf("LOL");
+	char	*str;
 
-
-	return (0);
+	if (!(str = malloc(sizeof(char) * size)))
+		return (0);
+	ft_bzero(str, size);
+	return (str);
 }

@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_btree_dfs.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: mkayumba <mkayumba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/10 23:07:47 by vess              #+#    #+#             */
-/*   Updated: 2022/05/18 11:43:28 by vess             ###   ########.fr       */
+/*   Created: 2020/09/25 15:46:02 by mkayumba          #+#    #+#             */
+/*   Updated: 2020/09/25 15:46:50 by lenox            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
+#include "libft.h"
 
-
-//int	main (int ac, char **av, char **env)
-int main()
+void	ft_btree_dfs_inorder(t_btree *root, void (*ptr_function)())
 {
-	printf("LOL");
-
-
-	return (0);
+	if (!root)
+		return ;
+	ft_btree_dfs_inorder(root->left, ptr_function);
+	(*ptr_function)(root->content);
+	ft_btree_dfs_inorder(root->right, ptr_function);
 }

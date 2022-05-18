@@ -6,7 +6,7 @@
 #    By: vess <vess@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/09 15:52:45 by vess              #+#    #+#              #
-#    Updated: 2022/05/10 23:13:09 by vess             ###   ########.fr        #
+#    Updated: 2022/05/18 11:42:06 by vess             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,12 +15,12 @@ NAME = minishell
 
 CC = clang
 
-CFLAGS =  -Wall -Wextra -Werror -g3 -pthread
+CFLAGS =  -Wall -Wextra -Werror -g3
 
 DEPS = $(SRCS:.c=.d)
 
 SRCS =	main.c \
-		create_token.c \
+
 
 	
 _GREY=	$'\033[1;30m
@@ -40,7 +40,8 @@ all: $(NAME)
 $(NAME): $(OBJ)
 		@echo "$(_YELLOW)[Compilation ongoing ...]"
 		@echo "$(_GREEN)[Compilation finished]"
-			$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+			make bonus -C ./libft
+			$(CC) $(CFLAGS) $(OBJ) -o $(NAME) -L./libft -lft
 		@echo "$(_CYAN)[Executable created]"
 		@echo [Name : minishell]
 
@@ -48,10 +49,12 @@ $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) -MMD -I includes -O3 -c $< -o $@
 	
 clean:
+	make clean -C ./libft
 	@rm -f $(OBJ) $(DEPS)
 	@echo "$(_RED)[All .o removed]"
 
 fclean: clean
+	make clean -C ./libft
 	@rm -f $(NAME)
 	@echo "$(_RED)[Executable removed]"
 

@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: mkayumba <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/10 23:07:47 by vess              #+#    #+#             */
-/*   Updated: 2022/05/18 11:43:28 by vess             ###   ########.fr       */
+/*   Created: 2019/11/04 17:36:38 by mkayumba          #+#    #+#             */
+/*   Updated: 2019/11/04 17:36:41 by mkayumba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
+#include <unistd.h>
 
-
-//int	main (int ac, char **av, char **env)
-int main()
+void	ft_putnbr_fd(int n, int fd)
 {
-	printf("LOL");
+	unsigned	int	nb;
+	char			c;
 
-
-	return (0);
+	nb = n;
+	nb *= (n < 0) ? -1 : 1;
+	if (n < 0)
+		write(fd, "-", 1);
+	if (nb >= 10)
+		ft_putnbr_fd(nb / 10, fd);
+	c = (nb % 10) + 48;
+	write(fd, &c, 1);
 }

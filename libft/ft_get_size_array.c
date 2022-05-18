@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_get_size_array.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: mkayumba <mkayumba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/10 23:07:47 by vess              #+#    #+#             */
-/*   Updated: 2022/05/18 11:43:28 by vess             ###   ########.fr       */
+/*   Created: 2020/09/25 14:09:13 by mkayumba          #+#    #+#             */
+/*   Updated: 2020/09/25 14:12:08 by lenox            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
+#include "libft.h"
 
-
-//int	main (int ac, char **av, char **env)
-int main()
+void		ft_get_size_array(char **array, int *line, int *column)
 {
-	printf("LOL");
+	int		i;
+	int		j;
 
-
-	return (0);
+	i = 0;
+	while (array[i])
+	{
+		j = (int)ft_strlen(array[i]);
+		if (j > *column)
+			*column = j;
+		i++;
+	}
+	*line = i;
 }

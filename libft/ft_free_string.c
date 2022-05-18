@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_free_string.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: mkayumba <mkayumba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/10 23:07:47 by vess              #+#    #+#             */
-/*   Updated: 2022/05/18 11:43:28 by vess             ###   ########.fr       */
+/*   Created: 2020/09/25 13:52:01 by mkayumba          #+#    #+#             */
+/*   Updated: 2020/09/25 13:53:08 by lenox            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
+#include <stdlib.h>
+#include "libft.h"
 
-
-//int	main (int ac, char **av, char **env)
-int main()
+void		ft_free_string(void *ptr)
 {
-	printf("LOL");
+	char	*str;
 
-
-	return (0);
+	if (ptr)
+	{
+		ft_bzero(ptr, ft_strlen(ptr));
+		str = (char *)ptr;
+		free(str);
+		str = 0;
+	}
 }

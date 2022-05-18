@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: mkayumba <mkayumba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/10 23:07:47 by vess              #+#    #+#             */
-/*   Updated: 2022/05/18 11:43:28 by vess             ###   ########.fr       */
+/*   Created: 2020/09/25 13:54:04 by mkayumba          #+#    #+#             */
+/*   Updated: 2020/09/25 13:54:25 by lenox            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
+#include <stdlib.h>
 
-
-//int	main (int ac, char **av, char **env)
-int main()
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	printf("LOL");
+	size_t	i;
 
-
-	return (0);
+	i = 0;
+	if (!n)
+		return (0);
+	while (s1[i] && s2[i] && s1[i] == s2[i] && i < (n - 1))
+		i++;
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }

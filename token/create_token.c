@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   create_token.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/10 23:07:47 by vess              #+#    #+#             */
-/*   Updated: 2022/05/27 22:39:03 by vess             ###   ########.fr       */
+/*   Created: 2022/05/09 16:27:27 by vess              #+#    #+#             */
+/*   Updated: 2022/05/27 22:40:21 by vess             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
+#include "../minishell.h"
 
-
-int	main (int ac, char **av, char **env)
+t_token *create_token(void *token_value, t_token_type token_type)
 {
-	//(void)ac;
-	//(void)av;
-	g_info.list_env = init_env(env);
-	g_info.list_input = 0;
-	g_info.list_path = 0;
-	g_info.ret = 0;
-	g_info.tab_var_env = 0;
-	
-	while(g_info.list_env->next)
+	t_token *token;
+	int		size;
+
+	size = sizeof(t_token);
+	token = malloc(size);
+	if (!token->value || !token->type)
 	{
-		printf("%s\n", (char*)g_info.list_env->content);
-		g_info.list_env = g_info.list_env->next;
+		exit(1);
 	}
-	return (0);
+	token->value = token_value;
+	token->type = token_type;
+	return (token);
 }

@@ -1,32 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_token.c                                     :+:      :+:    :+:   */
+/*   get_token.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/09 16:27:27 by vess              #+#    #+#             */
-/*   Updated: 2022/05/12 17:18:42 by vess             ###   ########.fr       */
+/*   Created: 2022/05/18 11:48:14 by vess              #+#    #+#             */
+/*   Updated: 2022/05/25 15:23:12 by vess             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
+#include "../minishell.h"
 
-t_token *create_token(void *token_value, t_token_type token_type)
+void	*get_token_value(t_token *token)
 {
-	t_token *token;
-	int		size;
+	return (token->value);
+}
 
-	size = sizeof(t_token);
-	token = malloc(size);
-	if (!token->value || !token->type)
-	{
-
-		
-
-
-	}
-	token->value = token_value;
-	token->type = token_type;
-	return (token);
+t_token_type	get_token_type(t_token *token)
+{
+	return (token->type);
 }

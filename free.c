@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_token.c                                        :+:      :+:    :+:   */
+/*   free.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/18 11:48:14 by vess              #+#    #+#             */
-/*   Updated: 2022/05/18 11:48:27 by vess             ###   ########.fr       */
+/*   Created: 2022/05/24 17:22:33 by vess              #+#    #+#             */
+/*   Updated: 2022/05/24 17:22:33 by vess             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
-
-void	*get_token_value(t_token *token)
+typedef struct		s_info
 {
-	return (token->value);
-}
+	t_list			*list_env;
+	void			*ptr;
+	t_list			*list_input;
+	t_list			*list_path;
+	char			**tab_var_env;
+	int				ret;
+}					t_info;
 
-t_token_type	get_token_type(t_token *token)
+int	free_all(t_info *info, int code_error)
 {
-	return (token->type);
+
+
+
+
+
 }

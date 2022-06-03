@@ -6,7 +6,7 @@
 /*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:52:12 by vess              #+#    #+#             */
-/*   Updated: 2022/05/18 11:27:23 by vess             ###   ########.fr       */
+/*   Updated: 2022/05/25 14:45:17 by vess             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <errno.h>
 # include <sys/types.h>
 # include <unistd.h>
+#include "./libft/libft.h"
 
 # define NOCOL "\033[0m"
 # define RED "\033[1;31m"
@@ -31,13 +32,14 @@
 # define BLU "\033[1;34m"
 # define MGN "\033[1;35m"
 
+/*
 typedef struct		s_list
 {
 	void			*content;
 	struct s_list	*prev;
 	struct s_list	*next;
 }					t_list;
-
+*/
 typedef enum		e_token_type
 {
 	and,
@@ -64,6 +66,19 @@ typedef struct		s_token
 }					t_token;
 
 
+typedef struct		s_info
+{
+	t_list			*list_env;
+	void			*ptr;
+	t_list			*list_input;
+	t_list			*list_path;
+	char			**tab_var_env;
+	int				ret;
+}					t_info;
 
+//variable globale
+t_info				g_info;
 
+t_list	*init_env(char **env);
 #endif
+

@@ -6,7 +6,7 @@
 #    By: vess <vess@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/09 15:52:45 by vess              #+#    #+#              #
-#    Updated: 2022/05/18 11:42:06 by vess             ###   ########.fr        #
+#    Updated: 2022/05/25 15:23:41 by vess             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,10 @@ CFLAGS =  -Wall -Wextra -Werror -g3
 DEPS = $(SRCS:.c=.d)
 
 SRCS =	main.c \
+		init_env.c \
+		./token/create_token.c \
+
+
 
 
 	

@@ -6,7 +6,7 @@
 /*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:52:12 by vess              #+#    #+#             */
-/*   Updated: 2022/05/25 14:45:17 by vess             ###   ########.fr       */
+/*   Updated: 2022/06/06 22:18:15 by vess             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,15 +32,7 @@
 # define BLU "\033[1;34m"
 # define MGN "\033[1;35m"
 
-/*
-typedef struct		s_list
-{
-	void			*content;
-	struct s_list	*prev;
-	struct s_list	*next;
-}					t_list;
-*/
-typedef enum		e_token_type
+typedef enum e_token_type
 {
 	and,
 	or,
@@ -59,14 +51,14 @@ typedef enum		e_token_type
 	space,
 }	t_token_type;
 
-typedef struct		s_token
+typedef struct s_token
 {
 	void			*value;
 	t_token_type	type;
 }					t_token;
 
 
-typedef struct		s_info
+typedef struct s_info
 {
 	t_list			*list_env;
 	void			*ptr;
@@ -78,7 +70,9 @@ typedef struct		s_info
 
 //variable globale
 t_info				g_info;
-
+t_token	*create_token(void *token_value, t_token_type token_type);
+void	tokenizer(char *input);
 t_list	*init_env(char **env);
+
 #endif
 

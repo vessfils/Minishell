@@ -6,15 +6,15 @@
 /*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 16:27:27 by vess              #+#    #+#             */
-/*   Updated: 2022/05/27 22:40:21 by vess             ###   ########.fr       */
+/*   Updated: 2022/06/06 18:51:51 by vess             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../minishell.h"
 
-t_token *create_token(void *token_value, t_token_type token_type)
+t_token	*create_token(void *token_value, t_token_type token_type)
 {
-	t_token *token;
+	t_token	*token;
 	int		size;
 
 	size = sizeof(t_token);

@@ -6,7 +6,7 @@
 #    By: vess <vess@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/09 15:52:45 by vess              #+#    #+#              #
-#    Updated: 2022/05/25 15:23:41 by vess             ###   ########.fr        #
+#    Updated: 2022/06/06 22:19:33 by vess             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,7 @@ DEPS = $(SRCS:.c=.d)
 SRCS =	main.c \
 		init_env.c \
 		./token/create_token.c \
+		./token/tokenizer.c \
 
 
 

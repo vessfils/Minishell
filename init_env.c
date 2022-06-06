@@ -6,7 +6,7 @@
 /*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 11:18:14 by vess              #+#    #+#             */
-/*   Updated: 2022/05/27 22:39:18 by vess             ###   ########.fr       */
+/*   Updated: 2022/06/05 15:54:31 by vess             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 t_list	*init_env(char **env)
 {
-	int	index;
-	t_list *begin;
-	t_list *new;
+	int		index;
+	t_list	*begin;
+	t_list	*new;
 	char	*str;
 
 	if (!env || !*env)

@@ -6,7 +6,7 @@
 /*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 23:24:05 by vess              #+#    #+#             */
-/*   Updated: 2022/06/06 22:34:14 by vess             ###   ########.fr       */
+/*   Updated: 2022/06/07 15:34:00 by vess             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,8 +85,7 @@ void	tokenizer(char *input)
 		exit(0);
 	ft_lstadd_back(&g_info.list_input, new);
 
-	printf("%s", (char *)g_info.list_input->content);
-	
+	//printf("%s", (char *)g_info.list_input->content);
 
 }
 

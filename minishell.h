@@ -6,7 +6,7 @@
 /*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:52:12 by vess              #+#    #+#             */
-/*   Updated: 2022/06/06 22:18:15 by vess             ###   ########.fr       */
+/*   Updated: 2022/06/07 21:39:14 by vess             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ typedef struct s_info
 //variable globale
 t_info				g_info;
 t_token	*create_token(void *token_value, t_token_type token_type);
+t_token_type	define_type(char charset);
 void	tokenizer(char *input);
 t_list	*init_env(char **env);
 

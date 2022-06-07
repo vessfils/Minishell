@@ -6,7 +6,7 @@
 /*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 23:07:47 by vess              #+#    #+#             */
-/*   Updated: 2022/06/07 17:40:42 by vess             ###   ########.fr       */
+/*   Updated: 2022/06/07 22:37:08 by vess             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,28 +38,15 @@ int	main(int ac, char **av, char **env)
 {
 	(void)ac;
 	(void)av;
-	t_token *token;
-	t_list				*new;
-	t_list				*new1;
-	
-	new = 0;
-	new1 = 0;
-	token = 0;
-	//char * input = "42";
-	
+
 	g_info.list_env = init_env(env);
 	g_info.list_input = 0;
-	//g_info.list_input->content = 0;
 	g_info.list_path = 0;
 	g_info.ret = 0;
 	g_info.tab_var_env = 0;
 
-/*
-token = create_token(input,literal);
-new = ft_lstnew(token);
-ft_lstadd_back(&g_info.list_input, new);
-*/
-//printf("%s\n", (char *)g_info.list_input->content);
+	//printf("%s\n", (char *)((t_token *)new->content)->value);
+//	printf("%s\n", (char *)((t_token *)g_info.list_input->content)->value);
 /*
 	while (g_info.list_input->next)
 	{
@@ -67,12 +54,9 @@ ft_lstadd_back(&g_info.list_input, new);
 		g_info.list_input = g_info.list_input->next;
 	}
 */
-	
-	/*
 	while (42)
 	{
 		prompt();
 	}
-	*/
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 23:24:05 by vess              #+#    #+#             */
-/*   Updated: 2022/06/07 15:34:00 by vess             ###   ########.fr       */
+/*   Updated: 2022/06/07 22:38:09 by vess             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static t_token			g_tab_token[] = {
 	{0, 0},
 };
 
-static t_token_type	define_type(char charset)
+t_token_type	define_type(char charset)
 {
 	int				i;
 	t_token_type	type;
@@ -84,9 +84,7 @@ void	tokenizer(char *input)
 	if (!(new = ft_lstnew(token)))
 		exit(0);
 	ft_lstadd_back(&g_info.list_input, new);
-
-	//printf("%s", (char *)g_info.list_input->content);
-
+	//printf("%s\n", (char *)((t_token *)g_info.list_input->content)->value);
 }
 
 

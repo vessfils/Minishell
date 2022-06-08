@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   tokenizer.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: jcampagn <jcampagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 23:24:05 by vess              #+#    #+#             */
-/*   Updated: 2022/06/07 22:38:09 by vess             ###   ########.fr       */
+/*   Updated: 2022/06/08 16:57:24 by jcampagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../minishell.h"
+#include "minishell.h"
 
 static t_token			g_tab_token[] = {
 	{"&", and},
@@ -50,24 +50,6 @@ t_token_type	define_type(char charset)
 	}
 	return (type);
 }
-/*
-typedef struct s_token
-{
-	void			*value;
-	t_token_type	type;
-}					t_token;
-
-
-typedef struct s_info
-{
-	t_list			*list_env;
-	void			*ptr;
-	t_list			*list_input;
-	t_list			*list_path;
-	char			**tab_var_env;
-	int				ret;
-}					t_info;
-*/
 
 void	tokenizer(char *input)
 {
@@ -86,7 +68,3 @@ void	tokenizer(char *input)
 	ft_lstadd_back(&g_info.list_input, new);
 	//printf("%s\n", (char *)((t_token *)g_info.list_input->content)->value);
 }
-
-
-
-

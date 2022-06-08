@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: jcampagn <jcampagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:52:12 by vess              #+#    #+#             */
-/*   Updated: 2022/06/07 21:39:14 by vess             ###   ########.fr       */
+/*   Updated: 2022/06/08 19:06:09 by jcampagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
- 
 #ifndef MINISHELL_H
 # define MINISHELL_H
 
@@ -20,7 +19,7 @@
 # include <errno.h>
 # include <sys/types.h>
 # include <unistd.h>
-#include "./libft/libft.h"
+# include "libft.h"
 
 # define NOCOL "\033[0m"
 # define RED "\033[1;31m"
@@ -69,11 +68,10 @@ typedef struct s_info
 }					t_info;
 
 //variable globale
-t_info				g_info;
-t_token	*create_token(void *token_value, t_token_type token_type);
+extern t_info				g_info;
+t_token			*create_token(void *token_value, t_token_type token_type);
 t_token_type	define_type(char charset);
-void	tokenizer(char *input);
-t_list	*init_env(char **env);
+void			tokenizer(char *input);
+t_list			*init_env(char **env);
 
 #endif
-

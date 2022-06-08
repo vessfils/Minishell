@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: vess <vess@student.42.fr>                  +#+  +:+       +#+         #
+#    By: jcampagn <jcampagn@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/09 15:52:45 by vess              #+#    #+#              #
-#    Updated: 2022/06/06 22:19:33 by vess             ###   ########.fr        #
+#    Updated: 2022/06/08 18:34:39 by jcampagn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME = minishell
 
 CC = clang
 
-CFLAGS =  -Wall -Wextra -Werror -g3
+CFLAGS =  -Wall -Wextra -Werror -g3 -I./include/ -I libft -v
 
 DEPS = $(SRCS:.c=.d)
 
@@ -51,7 +51,7 @@ $(NAME): $(OBJ)
 		@echo [Name : minishell]
 
 %.o: %.c
-	$(CC) $(CFLAGS) -MMD -I includes -O3 -c $< -o $@
+	$(CC) $(CFLAGS) -MMD -O3 -c $< -o $@
 	
 clean:
 	make clean -C ./libft

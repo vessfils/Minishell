@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: jcampagn <jcampagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 23:07:47 by vess              #+#    #+#             */
-/*   Updated: 2022/06/07 22:37:08 by vess             ###   ########.fr       */
+/*   Updated: 2022/06/08 18:51:09 by jcampagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,17 +34,17 @@ void	prompt(void)
 	}
 }
 
+t_info	g_info;
+
 int	main(int ac, char **av, char **env)
 {
 	(void)ac;
 	(void)av;
-
 	g_info.list_env = init_env(env);
 	g_info.list_input = 0;
 	g_info.list_path = 0;
 	g_info.ret = 0;
 	g_info.tab_var_env = 0;
-
 	//printf("%s\n", (char *)((t_token *)new->content)->value);
 //	printf("%s\n", (char *)((t_token *)g_info.list_input->content)->value);
 /*

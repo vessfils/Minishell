@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   create_token.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: jcampagn <jcampagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 16:27:27 by vess              #+#    #+#             */
-/*   Updated: 2022/06/06 18:51:51 by vess             ###   ########.fr       */
+/*   Updated: 2022/06/08 16:56:38 by jcampagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../minishell.h"
+#include "minishell.h"
 
 t_token	*create_token(void *token_value, t_token_type token_type)
 {

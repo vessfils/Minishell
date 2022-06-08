@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jcampagn <jcampagn@student.42.fr>          +#+  +:+       +#+         #
+#    By: vess <vess@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/09 15:52:45 by vess              #+#    #+#              #
-#    Updated: 2022/06/08 18:34:39 by jcampagn         ###   ########.fr        #
+#    Updated: 2022/06/08 23:42:54 by vess             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,8 @@ SRCS =	main.c \
 		init_env.c \
 		./token/create_token.c \
 		./token/tokenizer.c \
+		./token/concatenate_token.c \
+
 
 
 

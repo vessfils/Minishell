@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jcampagn <jcampagn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 23:07:47 by vess              #+#    #+#             */
-/*   Updated: 2022/06/08 18:51:09 by jcampagn         ###   ########.fr       */
+/*   Updated: 2022/06/08 23:38:28 by vess             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,9 +54,19 @@ int	main(int ac, char **av, char **env)
 		g_info.list_input = g_info.list_input->next;
 	}
 */
+	t_token *token1;
+	t_token *token2;
+	t_token *token3;
+
+	token1 = create_token("42", literal);
+	token2 = create_token("43", literal);
+	token3 = concatenate_2token(token1, token2, literal);
+	printf("%s\n", (char *)token3->value);
+/*
 	while (42)
 	{
 		prompt();
 	}
+*/
 	return (0);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jcampagn <jcampagn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:52:12 by vess              #+#    #+#             */
-/*   Updated: 2022/06/08 19:06:09 by jcampagn         ###   ########.fr       */
+/*   Updated: 2022/06/08 23:41:57 by vess             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,7 @@ extern t_info				g_info;
 t_token			*create_token(void *token_value, t_token_type token_type);
 t_token_type	define_type(char charset);
 void			tokenizer(char *input);
+t_token	*concatenate_2token(t_token *token1, t_token *token2, t_token_type type);
 t_list			*init_env(char **env);
 
 #endif

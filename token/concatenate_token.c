@@ -6,7 +6,7 @@
 /*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 23:24:35 by vess              #+#    #+#             */
-/*   Updated: 2022/06/08 23:42:02 by vess             ###   ########.fr       */
+/*   Updated: 2022/06/09 00:02:32 by vess             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,10 @@ t_token	*concatenate_2token(t_token *token1, t_token *token2,
 		exit(0);
 	join = create_token(new, type);
 	return (join);
+}
+
+t_token *concatenate_sametype(t_token **begin, t_token_type type)
+{
+
+	
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   concatenate_token.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: jcampagn <jcampagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 23:24:35 by vess              #+#    #+#             */
-/*   Updated: 2022/06/10 15:01:34 by vess             ###   ########.fr       */
+/*   Updated: 2022/06/10 16:51:22 by jcampagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ t_token	*concatenate_2token(t_token *token1, t_token *token2,
 	join = create_token(new, type);
 	return (join);
 }
-
 
 void	concatenate_sametype(t_list **begin, t_token_type type)
 {

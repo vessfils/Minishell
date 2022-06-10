@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jcampagn <jcampagn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 23:07:47 by vess              #+#    #+#             */
-/*   Updated: 2022/06/10 18:41:53 by jcampagn         ###   ########.fr       */
+/*   Updated: 2022/06/10 23:45:29 by vess             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,27 +56,27 @@ int	main(int ac, char **av, char **env)
 */
 	t_token *token1;
 	t_token *token2;
+	t_token *token3;
 	t_list *begin;
 	t_list *new1;
 	t_list *new2;
-
+	t_list *new3;
 	begin = NULL;
-	token1 = create_token(ft_strdup("42"), and);
+	token1 = create_token(ft_strdup("42"), literal);
 	token2 = create_token(ft_strdup("43"), literal);
+	token3 = create_token(ft_strdup("|"), literal);
 	new1 = ft_lstnew(token1);
 	new2 = ft_lstnew(token2);
+	new3 = ft_lstnew(token3);
 	ft_lstadd_back(&g_info.list_input, new1);
 	ft_lstadd_back(&g_info.list_input, new2);
-	/*
-	while (begin->content)
-	{
-			printf("%s\n", (char *)((t_token *)begin->content)->value);
-			begin = begin->next;
-	}
-	*/
+	ft_lstadd_back(&g_info.list_input, new3);
 	concatenate_sametype(&g_info.list_input, literal);
-	printf("%s\n", (char *)((t_token *)g_info.list_input->content)->value);
-	printf("%s\n", (char *)((t_token *)g_info.list_input->next->content)->value);
+	while (g_info.list_input)
+	{
+		printf("%s\n", (char *)((t_token *)g_info.list_input->content)->value);
+		g_info.list_input = g_info.list_input->next;
+	}
 /*
 	while (42)
 	{

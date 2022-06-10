@@ -6,7 +6,7 @@
 /*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:52:12 by vess              #+#    #+#             */
-/*   Updated: 2022/06/09 13:17:07 by vess             ###   ########.fr       */
+/*   Updated: 2022/06/10 14:48:47 by vess             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,8 +73,11 @@ t_token			*create_token(void *token_value, t_token_type token_type);
 void			*get_token_value(t_token *token);
 t_token_type	get_token_type(t_token *token);
 t_token_type	define_type(char charset);
+void			clear_token(void *content);
 void			tokenizer(char *input);
-t_token	*concatenate_2token(t_token *token1, t_token *token2, t_token_type type);
+t_token			*concatenate_2token(t_token *token1, t_token *token2,
+					t_token_type type);
+void			concatenate_sametype(t_list **begin, t_token_type type);
 t_list			*init_env(char **env);
 
 #endif

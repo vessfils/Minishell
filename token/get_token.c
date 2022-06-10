@@ -6,11 +6,11 @@
 /*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 11:48:14 by vess              #+#    #+#             */
-/*   Updated: 2022/06/06 18:52:19 by vess             ###   ########.fr       */
+/*   Updated: 2022/06/10 13:57:59 by vess             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../minishell.h"
+#include "minishell.h"
 
 void	*get_token_value(t_token *token)
 {

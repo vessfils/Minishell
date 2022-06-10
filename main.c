@@ -6,7 +6,7 @@
 /*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 23:07:47 by vess              #+#    #+#             */
-/*   Updated: 2022/06/08 23:38:28 by vess             ###   ########.fr       */
+/*   Updated: 2022/06/10 15:06:26 by vess             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,12 +56,26 @@ int	main(int ac, char **av, char **env)
 */
 	t_token *token1;
 	t_token *token2;
-	t_token *token3;
+	t_list *begin;
+	t_list *new1;
+	t_list *new2;
 
+	begin = NULL;
 	token1 = create_token("42", literal);
 	token2 = create_token("43", literal);
-	token3 = concatenate_2token(token1, token2, literal);
-	printf("%s\n", (char *)token3->value);
+	new1 = ft_lstnew(token1);
+	new2 = ft_lstnew(token2);
+	ft_lstadd_back(&g_info.list_input, new1);
+	ft_lstadd_back(&g_info.list_input, new2);
+	/*
+	while (begin->content)
+	{
+			printf("%s\n", (char *)((t_token *)begin->content)->value);
+			begin = begin->next;
+	}
+	*/
+	concatenate_sametype(&g_info.list_input, literal);
+//	printf("%s\n", (char *)((t_token *)g_info.list_input->content)->value);
 /*
 	while (42)
 	{

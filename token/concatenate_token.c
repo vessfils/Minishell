@@ -6,7 +6,7 @@
 /*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 23:24:35 by vess              #+#    #+#             */
-/*   Updated: 2022/06/09 14:18:13 by vess             ###   ########.fr       */
+/*   Updated: 2022/06/10 15:01:34 by vess             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,20 +29,25 @@ t_token	*concatenate_2token(t_token *token1, t_token *token2,
 	return (join);
 }
 
-t_token *concatenate_sametype(t_list **begin, t_token_type type)
-{
 
-	t_token *tmp;
-	
-	while (begin & *begin && (*begin)->next)
+void	concatenate_sametype(t_list **begin, t_token_type type)
+{
+	t_token	*tmp;
+	t_list	*todel;
+
+	while (begin && *begin && (*begin)->next)
 	{
 		if (get_token_type((*begin)->content) != type)
 			exit(0);
 		if (get_token_type((*begin)->next->content) != type)
 			exit(0);
-		tmp = *begin->next->content;
-		tmp = concatenate_2token((*begin)->content, tmp);	
-		
+		tmp = (*begin)->next->content;
+		tmp = concatenate_2token((*begin)->content, tmp, type);
+		todel = *begin;
+		*begin = todel->next;
+		clear_token((*begin)->content);
+		(*begin)->content = tmp;
+		ft_list_remove_current_node(&g_info.list_input, todel, clear_token);
 	}
-	
 }
+

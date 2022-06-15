@@ -6,7 +6,7 @@
 #    By: vess <vess@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/09 15:52:45 by vess              #+#    #+#              #
-#    Updated: 2022/06/10 13:58:44 by vess             ###   ########.fr        #
+#    Updated: 2022/06/15 16:53:13 by vess             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ SRCS =	main.c \
 		./token/concatenate_token.c \
 		./token/get_token.c \
 		./free/free.c \
+		./parsing/parsing.c \
 
 
 

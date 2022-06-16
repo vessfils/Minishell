@@ -6,7 +6,7 @@
 /*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:52:12 by vess              #+#    #+#             */
-/*   Updated: 2022/06/10 14:48:47 by vess             ###   ########.fr       */
+/*   Updated: 2022/06/16 10:53:46 by vess             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,9 @@
 # define DGRAY "\033[1;90m"
 # define BLU "\033[1;34m"
 # define MGN "\033[1;35m"
+
+# define ERROR -1
+# define SUCCESS 0
 
 typedef enum e_token_type
 {
@@ -78,6 +81,8 @@ void			tokenizer(char *input);
 t_token			*concatenate_2token(t_token *token1, t_token *token2,
 					t_token_type type);
 void			concatenate_sametype(t_list **begin, t_token_type type);
+int				check_1(t_list **begin);
+int				deal_quote(t_list **begin);
 t_list			*init_env(char **env);
 
 #endif

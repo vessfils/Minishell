@@ -6,7 +6,7 @@
 /*   By: jcampagn <jcampagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 23:07:47 by vess              #+#    #+#             */
-/*   Updated: 2022/06/18 13:04:33 by jcampagn         ###   ########.fr       */
+/*   Updated: 2022/06/18 19:00:34 by jcampagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,30 +60,36 @@ int	main(int ac, char **av, char **env)
 	t_token *token3;
 	t_list *begin;
 	t_list *new1;
-	t_list *new2;
-	t_list *new3;
+//	t_list *new2;
+//	t_list *new3;
 	begin = NULL;
 	token1 = create_token(ft_strdup("42"), literal);
 	token2 = create_token(ft_strdup("43"), literal);
 	token3 = create_token(ft_strdup("|"), literal);
+	
+
 	new1 = ft_lstnew(token1);
-	new2 = ft_lstnew(token2);
-	new3 = ft_lstnew(token3);
+	//new2 = ft_lstnew(token2);
+	//new3 = ft_lstnew(token3);
 	ft_lstadd_back(&g_info.list_input, new1);
-	ft_lstadd_back(&g_info.list_input, new2);
-	ft_lstadd_back(&g_info.list_input, new3);
-	concatenate_sametype(&g_info.list_input, literal);
+//	ft_lstadd_back(&g_info.list_input, new2);
+	//ft_lstadd_back(&g_info.list_input, new3);
+	//concatenate_sametype(&g_info.list_input, literal);
+	change_token_type(&g_info.list_input, 13);
 	while (g_info.list_input)
 	{
-		printf("%s\n", (char *)((t_token *)g_info.list_input->content)->value);
+		//printf("%s\n", (char *)((t_token *)g_info.list_input->content)->value);
+		printf("%u\n", (int)((t_token *)g_info.list_input->content)->type);
 		g_info.list_input = g_info.list_input->next;
 	}
 
 */
+
+/*
 	while (42)
 	{
 		prompt();
 	}
-
+*/
 	return (0);
 }

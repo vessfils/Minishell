@@ -6,7 +6,7 @@
 #    By: jcampagn <jcampagn@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/09 15:52:45 by vess              #+#    #+#              #
-#    Updated: 2022/06/18 18:10:21 by jcampagn         ###   ########.fr        #
+#    Updated: 2022/06/18 18:43:30 by jcampagn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,7 @@ SRCS =	main.c \
 		./token/tokenizer.c \
 		./token/concatenate_token.c \
 		./token/get_token.c \
+		./token/change_token_type.c \
 		./free/free.c \
 		./parsing/parsing.c \
 		./parsing/handle_quote.c \

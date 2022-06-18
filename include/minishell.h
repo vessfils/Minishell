@@ -6,7 +6,7 @@
 /*   By: jcampagn <jcampagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:52:12 by vess              #+#    #+#             */
-/*   Updated: 2022/06/18 17:58:45 by jcampagn         ###   ########.fr       */
+/*   Updated: 2022/06/18 18:43:59 by jcampagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,7 @@ t_token_type	get_token_type(t_token *token);
 t_token_type	define_type(char charset);
 void			clear_token(void *content);
 void			tokenizer(char *input);
+void			change_token_type(t_list **begin, t_token_type new_type);
 t_token			*concatenate_2token(t_token *token1, t_token *token2,
 					t_token_type type);
 void			concatenate_sametype(t_list **begin, t_token_type type);

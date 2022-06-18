@@ -6,27 +6,32 @@
 /*   By: jcampagn <jcampagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 10:30:36 by vess              #+#    #+#             */
-/*   Updated: 2022/06/18 19:03:53 by jcampagn         ###   ########.fr       */
+/*   Updated: 2022/06/18 19:54:08 by jcampagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-
+/*
 static void	handle_last_token(t_list **begin, t_token_type type)
 {
-	t_token_type	*token;
-	t_list			*todel;
+	//t_token_type	*token;
+	//t_list			*todel;
 
 	token = (*begin)->content;
+
 	if (token.type == type)
-		
+	{
+		change_token_type()
+
+	}
+
 
 
 		*begin = (*begin)->next;
 	ft_list_current_node(&g_info.list_input, begin, clear_token);
 }
-
+*/
 static int	check_quote(t_list *tmp, t_token_type type_quote)
 {
 	t_token	*token;

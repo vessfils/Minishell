@@ -6,7 +6,7 @@
 #    By: jcampagn <jcampagn@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/09 15:52:45 by vess              #+#    #+#              #
-#    Updated: 2022/06/18 18:43:30 by jcampagn         ###   ########.fr        #
+#    Updated: 2022/06/18 19:51:56 by jcampagn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,7 +67,7 @@ clean:
 	@echo "$(_RED)[All .o removed]"
 
 fclean: clean
-	make clean -C ./libft
+	make fclean -C ./libft
 	@rm -f $(NAME)
 	@echo "$(_RED)[Executable removed]"
 

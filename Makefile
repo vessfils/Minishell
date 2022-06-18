@@ -6,7 +6,7 @@
 #    By: jcampagn <jcampagn@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/09 15:52:45 by vess              #+#    #+#              #
-#    Updated: 2022/06/18 18:04:20 by jcampagn         ###   ########.fr        #
+#    Updated: 2022/06/18 18:10:21 by jcampagn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,7 +72,7 @@ fclean: clean
 
 git : fclean
 	git add --all
-	git commit
+	git commit -m ok
 	git push 
 	
 re: fclean all

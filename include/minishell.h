@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: jcampagn <jcampagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:52:12 by vess              #+#    #+#             */
-/*   Updated: 2022/06/16 10:53:46 by vess             ###   ########.fr       */
+/*   Updated: 2022/06/18 17:58:45 by jcampagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,8 +81,9 @@ void			tokenizer(char *input);
 t_token			*concatenate_2token(t_token *token1, t_token *token2,
 					t_token_type type);
 void			concatenate_sametype(t_list **begin, t_token_type type);
-int				check_1(t_list **begin);
+int				check_input1(t_list **begin);
 int				deal_quote(t_list **begin);
+void			error_msg(char *cmd, char *arg, char *msg);
 t_list			*init_env(char **env);
 
 #endif

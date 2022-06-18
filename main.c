@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: jcampagn <jcampagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 23:07:47 by vess              #+#    #+#             */
-/*   Updated: 2022/06/10 23:45:29 by vess             ###   ########.fr       */
+/*   Updated: 2022/06/18 13:04:33 by jcampagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ int	main(int ac, char **av, char **env)
 		g_info.list_input = g_info.list_input->next;
 	}
 */
+/*
 	t_token *token1;
 	t_token *token2;
 	t_token *token3;
@@ -77,11 +78,12 @@ int	main(int ac, char **av, char **env)
 		printf("%s\n", (char *)((t_token *)g_info.list_input->content)->value);
 		g_info.list_input = g_info.list_input->next;
 	}
-/*
+
+*/
 	while (42)
 	{
 		prompt();
 	}
-*/
+
 	return (0);
 }

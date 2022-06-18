@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: vess <vess@student.42.fr>                  +#+  +:+       +#+         #
+#    By: jcampagn <jcampagn@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/09 15:52:45 by vess              #+#    #+#              #
-#    Updated: 2022/06/16 10:49:31 by vess             ###   ########.fr        #
+#    Updated: 2022/06/18 18:04:20 by jcampagn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,8 @@ SRCS =	main.c \
 		./token/get_token.c \
 		./free/free.c \
 		./parsing/parsing.c \
-		./parsing/quote.c \
+		./parsing/handle_quote.c \
+		./utile/utile.c	\
 
 
 
@@ -71,7 +72,7 @@ fclean: clean
 
 git : fclean
 	git add --all
-	git commit 
+	git commit
 	git push 
 	
 re: fclean all

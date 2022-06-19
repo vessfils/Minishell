@@ -6,7 +6,7 @@
 /*   By: jcampagn <jcampagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/15 16:50:19 by vess              #+#    #+#             */
-/*   Updated: 2022/06/18 17:58:31 by jcampagn         ###   ########.fr       */
+/*   Updated: 2022/06/19 17:16:04 by jcampagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,12 @@ int	check_input1(t_list **begin)
 		}
 		return (SUCCESS);
 	}
+	return (SUCCESS);
+}
+
+int	parsing(t_list *cmd)
+{
+	if (check_input1(&cmd) != SUCCESS)
+		return (ERROR);
 	return (SUCCESS);
 }

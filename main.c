@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: jcampagn <jcampagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 23:07:47 by vess              #+#    #+#             */
-/*   Updated: 2022/06/19 01:05:32 by vess             ###   ########.fr       */
+/*   Updated: 2022/06/19 19:27:32 by jcampagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ void	prompt(void)
 		buf[r] = '\0';
 		if (buf[0] != '\n')
 		{
+			i++;
 			if (i == 1)
 				tokenizer(" ");
 			tokenizer(buf);
@@ -84,15 +85,15 @@ int	main(int ac, char **av, char **env)
 	}
 
 */
-
-
 	while (42)
 	{
 		prompt();
-		printf("%s", (char *)((t_token *)g_info.list_input->content)->value);
+		//printf("Hello");
+		parsing(g_info.list_input);
+		//printf("%s", (char *)((t_token *)g_info.list_input->content)->value);
+		//printf("%s", (char *)((t_token *)g_info.list_input->content)->value);
 		//g_info.list_input = g_info.list_input->next;
-
 	}
 
-	return (0);
+	return (g_info.ret);
 }

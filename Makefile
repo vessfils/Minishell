@@ -6,7 +6,7 @@
 #    By: jcampagn <jcampagn@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/09 15:52:45 by vess              #+#    #+#              #
-#    Updated: 2022/06/18 19:51:56 by jcampagn         ###   ########.fr        #
+#    Updated: 2022/06/19 19:02:11 by jcampagn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,6 +78,9 @@ git : fclean
 	
 re: fclean all
 
+run:	$(NAME)
+		./$(NAME)
+
 -include $(DEPS)
 
-.PHONY : all bonus clean fclean re git
+.PHONY : all bonus clean fclean re git run

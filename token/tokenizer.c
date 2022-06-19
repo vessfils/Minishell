@@ -6,7 +6,7 @@
 /*   By: jcampagn <jcampagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 23:24:05 by vess              #+#    #+#             */
-/*   Updated: 2022/06/08 16:57:24 by jcampagn         ###   ########.fr       */
+/*   Updated: 2022/06/19 18:35:59 by jcampagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,8 @@ void	tokenizer(char *input)
 		exit(0);
 	type = define_type(value[0]);
 	token = create_token(value, type);
-	if (!(new = ft_lstnew(token)))
+	new = ft_lstnew(token);
+	if (!new)
 		exit(0);
 	ft_lstadd_back(&g_info.list_input, new);
 	//printf("%s\n", (char *)((t_token *)g_info.list_input->content)->value);

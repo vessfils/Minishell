@@ -6,7 +6,7 @@
 /*   By: jcampagn <jcampagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:52:12 by vess              #+#    #+#             */
-/*   Updated: 2022/06/18 18:43:59 by jcampagn         ###   ########.fr       */
+/*   Updated: 2022/06/19 17:14:03 by jcampagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,7 @@ t_token			*concatenate_2token(t_token *token1, t_token *token2,
 void			concatenate_sametype(t_list **begin, t_token_type type);
 int				check_input1(t_list **begin);
 int				deal_quote(t_list **begin);
+int				parsing(t_list *cmd);
 void			error_msg(char *cmd, char *arg, char *msg);
 t_list			*init_env(char **env);
 

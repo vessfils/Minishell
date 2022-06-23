@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   concatenate_token.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jcampagn <jcampagn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 23:24:35 by vess              #+#    #+#             */
-/*   Updated: 2022/06/10 16:51:22 by jcampagn         ###   ########.fr       */
+/*   Updated: 2022/06/23 16:59:05 by vess             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ t_token	*concatenate_2token(t_token *token1, t_token *token2,
 	t2 = token2->value;
 	new = ft_strjoin(t1, t2);
 	if (!new)
-		exit(0);
+		exit(88);
 	join = create_token(new, type);
 	return (join);
 }
@@ -37,9 +37,9 @@ void	concatenate_sametype(t_list **begin, t_token_type type)
 	while (begin && *begin && (*begin)->next)
 	{
 		if (get_token_type((*begin)->content) != type)
-			exit(0);
+			return ;
 		if (get_token_type((*begin)->next->content) != type)
-			exit(0);
+			return ;
 		tmp = (*begin)->next->content;
 		tmp = concatenate_2token((*begin)->content, tmp, type);
 		todel = *begin;

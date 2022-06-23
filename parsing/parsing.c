@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jcampagn <jcampagn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/15 16:50:19 by vess              #+#    #+#             */
-/*   Updated: 2022/06/19 17:16:04 by jcampagn         ###   ########.fr       */
+/*   Updated: 2022/06/23 16:55:00 by vess             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,11 @@ int	check_input1(t_list **begin)
 			if (deal_quote(begin) == ERROR)
 				return (ERROR);
 		}
-		return (SUCCESS);
+		else if (token->type != space)
+		{
+			concatenate_sametype(begin, get_token_type((*begin)->content));
+		}
+		*begin = (*begin)->next;
 	}
 	return (SUCCESS);
 }

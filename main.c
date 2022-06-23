@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jcampagn <jcampagn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 23:07:47 by vess              #+#    #+#             */
-/*   Updated: 2022/06/19 19:27:32 by jcampagn         ###   ########.fr       */
+/*   Updated: 2022/06/23 16:32:04 by vess             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ int	main(int ac, char **av, char **env)
 {
 	(void)ac;
 	(void)av;
+	int	i;
+	i = 0;
 	g_info.list_env = init_env(env);
 	g_info.list_input = 0;
 	g_info.list_path = 0;
@@ -90,7 +92,12 @@ int	main(int ac, char **av, char **env)
 		prompt();
 		//printf("Hello");
 		parsing(g_info.list_input);
-		//printf("%s", (char *)((t_token *)g_info.list_input->content)->value);
+		while (g_info.list_input)
+		{
+			printf("i = %d %s\n", i, (char *)((t_token *)g_info.list_input->content)->value);
+			g_info.list_input = g_info.list_input->next;
+			i++;
+		}
 		//printf("%s", (char *)((t_token *)g_info.list_input->content)->value);
 		//g_info.list_input = g_info.list_input->next;
 	}

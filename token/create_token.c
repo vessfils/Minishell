@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   create_token.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jcampagn <jcampagn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 16:27:27 by vess              #+#    #+#             */
-/*   Updated: 2022/06/08 16:56:38 by jcampagn         ###   ########.fr       */
+/*   Updated: 2022/06/24 13:39:09 by vess             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ t_token	*create_token(void *token_value, t_token_type token_type)
 	token = malloc(size);
 	if (!token->value || !token->type)
 	{
-		exit(1);
+		exit(free_all(&g_info, ERROR));
 	}
 	token->value = token_value;
 	token->type = token_type;

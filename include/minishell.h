@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jcampagn <jcampagn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:52:12 by vess              #+#    #+#             */
-/*   Updated: 2022/06/19 17:14:03 by jcampagn         ###   ########.fr       */
+/*   Updated: 2022/06/24 13:32:37 by vess             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ typedef enum e_token_type
 {
 	and,
 	or,
-	semicolon,
+	//semicolon,
 	simple_redir_left,
 	simple_redir_right,
 	double_redir_left,
@@ -47,7 +47,7 @@ typedef enum e_token_type
 	option_command,
 	single_quote,
 	double_quote,
-	backslash,
+//	backslash,
 	literal,
 	variable,
 	space,
@@ -58,7 +58,6 @@ typedef struct s_token
 	void			*value;
 	t_token_type	type;
 }					t_token;
-
 
 typedef struct s_info
 {
@@ -87,5 +86,6 @@ int				deal_quote(t_list **begin);
 int				parsing(t_list *cmd);
 void			error_msg(char *cmd, char *arg, char *msg);
 t_list			*init_env(char **env);
+int				free_all(t_info *info, int code_error);
 
 #endif

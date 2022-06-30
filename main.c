@@ -6,7 +6,7 @@
 /*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 23:07:47 by vess              #+#    #+#             */
-/*   Updated: 2022/06/23 16:32:04 by vess             ###   ########.fr       */
+/*   Updated: 2022/06/26 17:49:52 by vess             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,68 +39,30 @@ t_info	g_info;
 
 int	main(int ac, char **av, char **env)
 {
+	int		i;
+
 	(void)ac;
 	(void)av;
-	int	i;
+
 	i = 0;
 	g_info.list_env = init_env(env);
 	g_info.list_input = 0;
 	g_info.list_path = 0;
 	g_info.ret = 0;
 	g_info.tab_var_env = 0;
-	//printf("%s\n", (char *)((t_token *)new->content)->value);
-//	printf("%s\n", (char *)((t_token *)g_info.list_input->content)->value);
-/*
-	while (g_info.list_input->next)
-	{
-		printf("%s\n", (char *)g_info.list_input->content);
-		g_info.list_input = g_info.list_input->next;
-	}
-*/
-/*
-	t_token *token1;
-	t_token *token2;
-	t_token *token3;
-	t_list *begin;
-	t_list *new1;
-//	t_list *new2;
-//	t_list *new3;
-	begin = NULL;
-	token1 = create_token(ft_strdup("42"), literal);
-	token2 = create_token(ft_strdup("43"), literal);
-	token3 = create_token(ft_strdup("|"), literal);
-	
 
-	new1 = ft_lstnew(token1);
-	//new2 = ft_lstnew(token2);
-	//new3 = ft_lstnew(token3);
-	ft_lstadd_back(&g_info.list_input, new1);
-//	ft_lstadd_back(&g_info.list_input, new2);
-	//ft_lstadd_back(&g_info.list_input, new3);
-	//concatenate_sametype(&g_info.list_input, literal);
-	change_token_type(&g_info.list_input, 13);
-	while (g_info.list_input)
-	{
-		//printf("%s\n", (char *)((t_token *)g_info.list_input->content)->value);
-		printf("%u\n", (int)((t_token *)g_info.list_input->content)->type);
-		g_info.list_input = g_info.list_input->next;
-	}
-
-*/
 	while (42)
 	{
 		prompt();
-		//printf("Hello");
 		parsing(g_info.list_input);
+
 		while (g_info.list_input)
 		{
 			printf("i = %d %s\n", i, (char *)((t_token *)g_info.list_input->content)->value);
 			g_info.list_input = g_info.list_input->next;
 			i++;
 		}
-		//printf("%s", (char *)((t_token *)g_info.list_input->content)->value);
-		//g_info.list_input = g_info.list_input->next;
+		exit(free_all(&g_info, 0));
 	}
-
 	return (g_info.ret);
 }

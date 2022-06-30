@@ -6,7 +6,7 @@
 /*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 23:24:05 by vess              #+#    #+#             */
-/*   Updated: 2022/06/23 16:51:06 by vess             ###   ########.fr       */
+/*   Updated: 2022/06/24 13:35:34 by vess             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ static t_token			g_tab_token[] = {
 	{"|", pipeline},
 	{"<", simple_redir_left},
 	{">", simple_redir_right},
-	{";", semicolon},
+	//{";", semicolon},
 	{"\"", double_quote},
 	{"'", single_quote},
-	{"\\", backslash},
+//	{"\\", backslash},
 	{"\f", space},
 	{"\n", space},
 	{"\r", space},
@@ -60,12 +60,11 @@ void	tokenizer(char *input)
 
 	value = ft_strdup(input);
 	if (!value)
-		exit(88);
+		exit(free_all(&g_info, ERROR));
 	type = define_type(value[0]);
 	token = create_token(value, type);
 	new = ft_lstnew(token);
 	if (!new)
-		exit(88);
+		exit(free_all(&g_info, ERROR));
 	ft_lstadd_back(&g_info.list_input, new);
-	//printf("%s\n", (char *)((t_token *)g_info.list_input->content)->value);
 }

@@ -6,7 +6,7 @@
 /*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/15 16:50:19 by vess              #+#    #+#             */
-/*   Updated: 2022/06/23 16:55:00 by vess             ###   ########.fr       */
+/*   Updated: 2022/07/07 16:46:51 by vess             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ int	check_input1(t_list **begin)
 		}
 		else if (token->type != space)
 		{
+			if (handle_variable(begin) == ERROR)
+				return (ERROR);
 			concatenate_sametype(begin, get_token_type((*begin)->content));
 		}
 		*begin = (*begin)->next;

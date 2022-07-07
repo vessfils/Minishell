@@ -6,7 +6,7 @@
 /*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 23:07:47 by vess              #+#    #+#             */
-/*   Updated: 2022/07/07 12:27:32 by vess             ###   ########.fr       */
+/*   Updated: 2022/07/07 16:47:12 by vess             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int	main(int ac, char **av, char **env)
 	g_info.list_path = 0;
 	g_info.ret = 0;
 	g_info.tab_var_env = 0;
-/*
+
 	while (42)
 	{
 		prompt();
@@ -66,7 +66,7 @@ int	main(int ac, char **av, char **env)
 	
 		//exit(free_all(&g_info, 0));
 	}
-	*/
+
 /*
 		while (g_info.list_env)
 		{
@@ -77,6 +77,6 @@ int	main(int ac, char **av, char **env)
 			i++;
 		}
 	*/
-	printf("%s\n", get_var_value(g_info.list_env, "PATH"));
+	//printf("%s\n", get_var_value(g_info.list_env, "PATH"));
 	return (g_info.ret);
 }

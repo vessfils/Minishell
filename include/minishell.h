@@ -6,7 +6,7 @@
 /*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:52:12 by vess              #+#    #+#             */
-/*   Updated: 2022/06/24 13:32:37 by vess             ###   ########.fr       */
+/*   Updated: 2022/07/07 10:52:10 by vess             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,5 +87,6 @@ int				parsing(t_list *cmd);
 void			error_msg(char *cmd, char *arg, char *msg);
 t_list			*init_env(char **env);
 int				free_all(t_info *info, int code_error);
+char			*get_var_value(t_list *listenv, char *name);
 
 #endif

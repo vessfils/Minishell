@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jcampagn <jcampagn@student.42.fr>          +#+  +:+       +#+         #
+#    By: vess <vess@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/09 15:52:45 by vess              #+#    #+#              #
-#    Updated: 2022/06/19 19:02:11 by jcampagn         ###   ########.fr        #
+#    Updated: 2022/07/07 10:53:48 by vess             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ SRCS =	main.c \
 		./free/free.c \
 		./parsing/parsing.c \
 		./parsing/handle_quote.c \
+		./parsing/get_var_value.c \
 		./utile/utile.c	\
 
 

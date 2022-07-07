@@ -6,7 +6,7 @@
 /*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 23:07:47 by vess              #+#    #+#             */
-/*   Updated: 2022/06/26 17:49:52 by vess             ###   ########.fr       */
+/*   Updated: 2022/07/07 12:27:32 by vess             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,11 +50,12 @@ int	main(int ac, char **av, char **env)
 	g_info.list_path = 0;
 	g_info.ret = 0;
 	g_info.tab_var_env = 0;
-
+/*
 	while (42)
 	{
 		prompt();
 		parsing(g_info.list_input);
+
 
 		while (g_info.list_input)
 		{
@@ -62,7 +63,20 @@ int	main(int ac, char **av, char **env)
 			g_info.list_input = g_info.list_input->next;
 			i++;
 		}
-		exit(free_all(&g_info, 0));
+	
+		//exit(free_all(&g_info, 0));
 	}
+	*/
+/*
+		while (g_info.list_env)
+		{
+			if (!ft_strstr(g_info.list_env->content, "USER"))
+
+		//	printf("i vaut %d %s\n", i, (char *)g_info.list_env->content);
+			g_info.list_env = g_info.list_env->next;
+			i++;
+		}
+	*/
+	printf("%s\n", get_var_value(g_info.list_env, "PATH"));
 	return (g_info.ret);
 }

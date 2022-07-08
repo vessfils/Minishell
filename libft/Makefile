@@ -37,7 +37,7 @@ MANDATORY =		./ft_memset.c\
 				./ft_strmapi.c\
 				./ft_toupper.c\
 				./ft_tolower.c\
-				./ft_lenght_nbr.c\
+				./ft_nbrlen.c\
 				./ft_isspace.c\
 				./ft_strcmp.c\
 				./ft_strstr.c\
@@ -62,7 +62,6 @@ BONUS	=	./ft_lstnew_bonus.c\
 			./ft_btree_create_node.c\
 			./ft_skip_white_space.c\
 			./get_next_line.c\
-			./get_next_line_utils.c\
 			./ft_nb_character_in_word.c\
 			./ft_btree_apply_suffix.c\
 			./ft_free_double_array.c\

@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_btree_create_node.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkayumba <mkayumba@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/22 18:46:34 by mkayumba          #+#    #+#             */
-/*   Updated: 2020/09/25 14:14:36 by lenox            ###   ########.fr       */
+/*   Created: 2022/07/08 15:10:40 by vess              #+#    #+#             */
+/*   Updated: 2022/07/08 15:10:45 by vess             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "libft.h"
 #include <stdlib.h>

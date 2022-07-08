@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkayumba <mkayumba@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/25 15:54:21 by mkayumba          #+#    #+#             */
-/*   Updated: 2020/11/27 15:23:26 by mkayumba         ###   ########.fr       */
+/*   Created: 2022/07/08 15:08:30 by vess              #+#    #+#             */
+/*   Updated: 2022/07/08 15:41:55 by vess             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,8 +70,8 @@ void				ft_putnbr_fd(int n, int fd);
 char				*ft_strchr(const char *s, int c);
 int					ft_isascii(int c);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-int					lenght_nbr(int nb);
-int					get_next_line(int fd, char **line);
+int					nbrlen(int nb);
+char				*get_next_line(int fd);
 int					ft_isspace (int c);
 int					ft_strcmp(char *s1, char *s2);
 char				*ft_strstr(char *str, char *to_find);

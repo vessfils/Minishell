@@ -5,10 +5,8 @@ static void	remplace_value_variable(t_token *token)
 	char	*var;
 	char	*retvar;
 
-printf("test2");
 	var = token->value;
 	var = get_var_value(&g_info.list_env, var);
-	
 	retvar = ft_strdup(var);
 	if (!retvar)
 		exit(free_all(&g_info, ERROR));
@@ -20,7 +18,6 @@ printf("test2");
 		token->type = literal;
 	}
 }
-
 
 int	handle_variable(t_list **current)
 {

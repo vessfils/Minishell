@@ -6,7 +6,7 @@
 /*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/15 16:50:19 by vess              #+#    #+#             */
-/*   Updated: 2022/07/07 16:46:51 by vess             ###   ########.fr       */
+/*   Updated: 2022/07/23 17:00:00 by vess             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	check_input1(t_list **begin)
 {
 	t_token	*token;
 
-	while (*begin && begin)
+	while (begin && *begin)
 	{
 		token = (*begin)->content;
 		if (token->type == single_quote || token->type == double_quote)
@@ -26,8 +26,7 @@ int	check_input1(t_list **begin)
 		}
 		else if (token->type != space)
 		{
-			if (handle_variable(begin) == ERROR)
-				return (ERROR);
+			handle_variable(begin);
 			concatenate_sametype(begin, get_token_type((*begin)->content));
 		}
 		*begin = (*begin)->next;

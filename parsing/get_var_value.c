@@ -10,7 +10,7 @@ char *get_var_value(t_list **listenv, char *name)
 	size = ft_strlen(name);
 	while (listenv)
 	{
-		str = (*listenv)->content;
+		str = (char *)(*listenv)->content;
 		if (ft_strstr(str, name) && str[size] == '=')
 			return (&str[size + 1]);
 		*listenv = (*listenv)->next;

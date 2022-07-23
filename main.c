@@ -6,7 +6,7 @@
 /*   By: vess <vess@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 23:07:47 by vess              #+#    #+#             */
-/*   Updated: 2022/07/07 16:47:12 by vess             ###   ########.fr       */
+/*   Updated: 2022/07/23 16:46:05 by vess             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,6 @@ int	main(int ac, char **av, char **env)
 			g_info.list_input = g_info.list_input->next;
 			i++;
 		}
-	
 		//exit(free_all(&g_info, 0));
 	}
 

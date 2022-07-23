@@ -6,7 +6,7 @@ static void	remplace_value_variable(t_token *token)
 	char	*retvar;
 
 	var = token->value;
-	var = get_var_value(&g_info.list_env, var);
+	var = get_var_value(g_info.list_env, var);
 	retvar = ft_strdup(var);
 	if (!retvar)
 		exit(free_all(&g_info, ERROR));

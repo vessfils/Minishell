@@ -1,6 +1,6 @@
 #include "minishell.h"
-
-static void	remplace_value_variable(t_token *token)
+/*
+ void	remplace_value_variable(t_token *token)
 {
 	char	*var;
 	char	*retvar;
@@ -15,6 +15,28 @@ static void	remplace_value_variable(t_token *token)
 	{
 		free(token->value);
 		token->value = retvar;
+		token->type = literal;
+	}
+}
+*/
+
+void	remplace_value_variable(t_token *token)
+{
+	char	*var;
+	int		ret;
+
+	ret = ft_strcmp(token->value, "?");
+	var = NULL;
+	if (!ret)
+		var = ft_itoa(g_info.ret);
+	else if (ret)
+		var = get_var_value(g_info.list_env, token->value);
+	ret = ft_strlen(token->value);
+	ft_bzero(token->value, ret);
+	if (var)
+	{
+		free(token->value);
+		token->value = var;
 		token->type = literal;
 	}
 }
